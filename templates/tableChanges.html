@@ -1,0 +1,112 @@
+{% extends "base.html" %}
+{% block content %}
+
+<body>
+<div class="content-page">
+    <!-- Start content -->
+    <div class="content">
+        <div class="container-fluid">
+
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="page-title-box">
+                        <div class="row align-items-center">
+                            <div class="col-md-8">
+                                <h4 class="page-title mb-0">52 weeks range table</h4>
+                                <ol class="breadcrumb m-0">
+                                    <!--<li class="breadcrumb-item active" aria-current="page"> 52 Weeks Range </li> -->
+                                </ol>
+                            </div>
+                        
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+            <!-- end row -->
+
+            <div class="row">
+                <div class="col-12">
+                    <div class="card">
+                        <div class="card-body">
+
+                            <form method="POST" enctype="multipart/form-data">
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <div class="p-20">
+                                            <div class="form-group">
+                                                <div class="form-group">
+                                                    <label>Percentage:</label>
+                                                    <input required name="date" class="form-control" type="number" min="0" max="100" placeholder="Percentage Change"/>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-3">
+                                        <div class="p-20">
+                                            <div class="form-group">
+                                                <div class="form-group">
+                                                    <div class="text-center m-t-15">
+                                                        <div style="padding:15px">
+                                                        <button type="submit" class="btn btn-primary waves-effect waves-light">Update Tables</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+
+
+                            </form>
+
+                        </div>
+                    </div>
+                </div> <!-- end col -->
+            </div> <!-- end row -->
+
+            <div class="row">
+                <div class="col-12">
+                    <div class="card">
+                        <div class="card-body">
+                            <table id="datatable" class="table table-bordered dt-responsive nowrap" style="border-collapse: collapse; border-spacing: 0; width: 100%;">
+                               <thead>
+                                <tr>
+                                    {% for col_name in columnsData %}
+                                        <th> {{ col_name }}</th>
+                                    {% endfor %}
+                                </tr>
+
+                                </thead>
+                                <tbody>
+                                {% for data in tableData %}
+                                    <tr>
+                                        <td> {{ data }} </td>
+                                        {% for value in tableData[data] %}
+                                            {% if tableData[data][value]['status'] == "increased" %}
+                                                <td><font color="#00E500">▲{{ tableData[data][value]['change'] }}</font></td>
+                                            {% endif %}
+                                            {% if tableData[data][value]['status'] == "decreased" %}
+                                                <td><font color="red">▼{{ tableData[data][value]['change'] }}</font></td>
+                                            {% endif %}
+                                            {% if tableData[data][value]['status'] == "no change" %}
+                                                <td>{{ tableData[data][value]['change'] }}</td>
+                                            {% endif %}
+                                        {% endfor %}
+                                    </tr>
+                                {% endfor %}
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div> <!-- end col -->
+            </div> <!-- end row -->
+
+        </div> <!-- container-fluid -->
+    </div> <!-- content -->
+</div>
+</body>
+{% endblock %}

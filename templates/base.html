@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+        <title>{{ title }}</title>
+        <meta content="Admin Dashboard" name="description" />
+        <meta content="Themesbrand" name="author" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+        <!-- App Icons -->
+        <link rel="shortcut icon" href="static/assets/images/favicon.ico">
+
+        <!--Morris Chart CSS -->
+        <link rel="stylesheet" href="static/plugins/morris/morris.css">
+
+        <!-- App css -->
+        <link href="static/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <link href="static/assets/css/icons.css" rel="stylesheet" type="text/css" />
+        <link href="static/assets/css/style.css" rel="stylesheet" type="text/css" />
+
+        <!-- DataTables -->
+        <link href="static/plugins/datatables/dataTables.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+        <link href="static/plugins/datatables/buttons.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+        <!-- Responsive datatable examples -->
+        <link href="static/plugins/datatables/responsive.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+
+    </head>
+
+
+    <body>
+
+        <!-- Loader -->
+        <div id="preloader"><div id="status"><div class="spinner"></div></div></div>
+        <div class="header-bg">
+            <!-- Navigation Bar-->
+            <header id="topnav">
+
+                <!-- MENU Start -->
+                <div class="navbar-custom">
+                    <div class="container-fluid">
+                        <!-- Logo-->
+                        <div class="d-none d-lg-block">
+                            <!-- Text Logo
+                            <a href="index.html" class="logo">
+                                Foxia
+                            </a>
+                             -->
+                            <!-- Image Logo -->
+                             <a href="inputPage" class="logo">
+                                <img src="static/assets/images/logo-sm.png" alt="" height="22" class="logo-small"> 
+                                 <!--<img src="static/assets/images/logo.png" alt="" height="20" class="logo-large">-->
+                            </a>
+
+                        </div>
+                        <!-- End Logo-->
+                        <div id="navigation">
+
+                            <!-- Navigation Menu-->
+                            <ul class="navigation-menu">
+
+                                <li class="has-submenu">
+                                    <a href="inputPage"><i class="dripicons-meter"></i>Dashboard</a>
+                                </li>
+                                <li class="has-submenu">
+                                    <a href="logout"><i></i>Logout</a>
+                                </li>
+                            </ul>
+                            <!-- End navigation menu -->
+                        </div> <!-- end #navigation -->
+                    </div> <!-- end container -->
+
+                </div> <!-- end navbar-custom -->
+            </header>
+
+
+        {% block content %}{% endblock %}
+
+        <!-- jQuery  -->
+        <script src="static/assets/js/jquery.min.js"></script>
+        <script src="static/assets/js/bootstrap.bundle.min.js"></script>
+        <script src="static/assets/js/modernizr.min.js"></script>
+        <script src="static/assets/js/waves.js"></script>
+        <script src="static/assets/js/jquery.slimscroll.js"></script>
+
+        <script src="static/plugins/peity-chart/jquery.peity.min.js"></script>
+
+        <!--Morris Chart-->
+        <script src="static/plugins/morris/morris.min.js"></script>
+        <script src="static/plugins/raphael/raphael-min.js"></script>
+
+        <script src="static/assets/pages/dashboard.js"></script>
+        <!-- App js -->
+        <script src="static/assets/js/app.js"></script>
+
+        <!-- Required datatable js -->
+        <script src="static/plugins/datatables/jquery.dataTables.min.js"></script>
+        <script src="static/plugins/datatables/dataTables.bootstrap4.min.js"></script>
+        <!-- Buttons examples -->
+        <script src="static/plugins/datatables/dataTables.buttons.min.js"></script>
+        <script src="static/plugins/datatables/buttons.bootstrap4.min.js"></script>
+        <script src="static/plugins/datatables/jszip.min.js"></script>
+        <script src="static/plugins/datatables/pdfmake.min.js"></script>
+        <script src="static/plugins/datatables/vfs_fonts.js"></script>
+        <script src="static/plugins/datatables/buttons.html5.min.js"></script>
+        <script src="static/plugins/datatables/buttons.print.min.js"></script>
+        <script src="static/plugins/datatables/buttons.colVis.min.js"></script>
+        <!-- Responsive examples -->
+        <script src="static/plugins/datatables/dataTables.responsive.min.js"></script>
+        <script src="static/plugins/datatables/responsive.bootstrap4.min.js"></script>
+
+        <!-- Datatable init js -->
+        <script src="static/assets/pages/datatables.init.js"></script>
+
+    </body>
+</html>
+
+

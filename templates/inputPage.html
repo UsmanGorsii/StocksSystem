@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+{% block content %}
+<meta http-equiv="refresh" content="10" >
+<div class="content-page">
+    <!-- Start content -->
+    <div class="content">
+        <div class="container-fluid">
+
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="page-title-box">
+                        <div class="row align-items-center">
+                            <div class="col-md-8">
+                                <h4 class="page-title mb-0">Dashboard</h4>
+                                <ol class="breadcrumb m-0">
+                                </ol>
+                            </div>
+                        </div> 
+                    </div>
+                </div>
+            </div>
+            <!-- end row -->
+
+            <div class="row">
+                <div class="col-12">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="row">
+
+                                <div class="col-md-4">
+                                    <div class="p-10">
+                                        <div class="text-center m-t-10">
+                                            <a href="startScraping" class="btn btn-primary waves-effect waves-light" placeholder="Daily Report"><font color="white">Start Scraping for today</font></a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-4">
+                                    <div class="p-10">
+                                        <div class="text-center m-t-10">
+                                            <a href="tableChanges" class="btn btn-primary waves-effect waves-light" placeholder="Daily Report"><font color="white">Percentage Changes Table</font></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="p-10">
+                                        <div class="text-center m-t-10">
+                                            <a href="tableDetails" class="btn btn-primary waves-effect waves-light" placeholder="Daily Report"><font color="white">52 weeks details Table</font></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div> <!-- end col -->
+            </div> <!-- end row -->
+            <div class="text-center m-t-10">
+                <p><font color="white">{{ scraping_status }}</font></p>
+            </div>
+        </div> <!-- container-fluid -->
+    </div> <!-- content -->
+</div>
+{% endblock %}
